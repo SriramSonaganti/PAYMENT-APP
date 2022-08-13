@@ -5,7 +5,7 @@
     return (
         <div>
             <div className="px-20 justify-center">
-        <img src={error}  className="max-w-full  border-none rounded align-middle"/>
+        <img src={error} alt="404 page not found"  className="max-w-full  border-none rounded align-middle"/>
         </div>
         </div>  
     )

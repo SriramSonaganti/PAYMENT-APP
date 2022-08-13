@@ -7,7 +7,7 @@ const Transaction = () => {
 
   useEffect(() => {
     const getDetails = async () => {
-        const data = await UserService.getAllTrans().then((res => {
+        UserService.getAllTrans().then((res => {
             
             setData(res);
             console.log(res);
