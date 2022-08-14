@@ -12,6 +12,7 @@ import Home from './components/Home';
 import ProtectedRoutes from './components/ProtectedRoutes';
 import PublicRoutes from './components/PublicRoutes'
 import Dashboard from './components/Dashboard'
+import Customer from './components/Customer';
 
 
 
@@ -34,7 +35,8 @@ function App() {
            
 
               <Route  element={<ProtectedRoutes roleRequired="Employee" />} >
-                  <Route path='/dashboard' element={<Dashboard />} /> 
+              <Route path='/dashboard' element={<Dashboard />} /> 
+              <Route path='/signup' element={<Customer />} /> 
                  
                   {/* <Route path="/manageUsers" element={<ManageUsers />} /> */}
                   {/* <Route path="/table" element={<Table />} /> */}

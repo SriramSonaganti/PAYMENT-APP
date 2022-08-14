@@ -217,6 +217,7 @@ function Transfer() {
     }
 
   return (
+    
       <div className='mx-auto p-4 w-1/2'>
           <h1 className="text-4xl font-extrabold text-center mb-12 text-indigo-600">  Money Transfer </h1>
             

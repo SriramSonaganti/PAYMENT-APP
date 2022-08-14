@@ -19,7 +19,7 @@ const login = (data) => {
 
 const signup = (data) => {
   return axios
-    .post("localhost:8080/api/auth/signup", data ,{headers: authHeader()})
+    .post("http://localhost:8080/api/auth/signup", data ,{headers: authHeader()})
     .then((response) => {
       console.log(response);
       return response;
@@ -44,6 +44,15 @@ const getCurrentUser = () => {
 
 };
 
+const getIp = () => {
+
+  return axios.get("http://geolocation-db.com/json/")
+    .then((response) => {
+        return response.data;
+     });
+
+};
+
 const logout = () => {
   
   localStorage.clear();
@@ -60,6 +69,7 @@ const AuthService = {
   verify,
   getCurrentUser,
   logout,
+  getIp,
 }
 
 export default AuthService;
