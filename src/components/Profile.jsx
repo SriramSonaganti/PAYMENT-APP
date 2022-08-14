@@ -39,6 +39,8 @@ function Profile() {
     }
     
     return (
+        <div className="py-40 bg-cover bg-no-repeat bg-fixed" style={{backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/books-68839.appspot.com/o/transfer.jpg?alt=media&token=a254c128-2de9-4f9a-8edf-e3156dc36158")'}}>
+   
    <div className="container mx-auto p-4">
         <div className="max-w-md w-full mx-auto">
             <h1 className="text-4xl font-extrabold text-center mb-12 text-indigo-600"> PROFILE </h1>
@@ -74,7 +76,8 @@ function Profile() {
             </div>
             </div>
         </div>
-    </div>
+            </div>
+            </div>
   )
 }
 
