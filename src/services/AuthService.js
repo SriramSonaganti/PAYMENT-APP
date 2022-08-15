@@ -1,9 +1,11 @@
 import axios from 'axios'
 import authHeader from './authHeader';
 
+const APIURL = "https://payment-dbs.herokuapp.com/api/auth"
+
 const login = (data) => {
     return axios
-      .post("http://localhost:8080/api/auth/login", data)
+      .post(APIURL+"/login", data)
       .then((response) => {
         if (response.data.accessToken) {
           console.log(response.data.otpStatus)
@@ -19,7 +21,7 @@ const login = (data) => {
 
 const signup = (data) => {
   return axios
-    .post("http://localhost:8080/api/auth/signup", data ,{headers: authHeader()})
+    .post(APIURL+"/signup", data ,{headers: authHeader()})
     .then((response) => {
       console.log(response);
       return response;
@@ -28,7 +30,7 @@ const signup = (data) => {
 
 const verify = (data) => {
   return axios
-    .post("http://localhost:8080/api/auth/verifyOtp", data , {headers:authHeader()})
+    .post(APIURL+"/verifyOtp", data , {headers:authHeader()})
     .then((response) => {
       console.log(response.message)
       localStorage.setItem("otpStatus",response.message)

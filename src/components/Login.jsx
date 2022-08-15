@@ -63,7 +63,7 @@ function Login(props) {
     
     return (
 
-        <div className="py-40 bg-cover bg-no-repeat bg-fixed" style={{backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/books-68839.appspot.com/o/login.jpg?alt=media&token=4ff70c8c-edfc-47da-88b7-53be9aa01703")'}}>
+        <div className="py-30  bg-cover bg-no-repeat bg-fixed" style={{backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/books-68839.appspot.com/o/login.jpg?alt=media&token=4ff70c8c-edfc-47da-88b7-53be9aa01703")'}}>
    
         
     <div className="container mx-auto p-8 flex">

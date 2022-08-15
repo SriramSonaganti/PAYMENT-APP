@@ -2,10 +2,13 @@
 import authHeader from './authHeader';
 import axios from "axios"
 
+// const APIURL = "http://localhost:8080/api"
+
+const APIURL = "https://payment-dbs.herokuapp.com/api"
 
 //GET CUSTOMER DETAILS
 const getMyDetails = () => {
-    return axios.get("http://localhost:8080/api/getMyDetails", { headers: authHeader() })
+    return axios.get(APIURL + "/getMyDetails", { headers: authHeader() })
     .then((response) => {
         return response.data;
      });
@@ -15,7 +18,7 @@ const getMyDetails = () => {
 
 //GET ALL TRANSACTIONS
 const getAllTrans = () => {
-    return axios.get("http://localhost:8080/api/getAllTrans", { headers: authHeader() })
+    return axios.get(APIURL + "/getAllTrans", { headers: authHeader() })
     .then((response) => {
         return response.data;
      });
@@ -25,7 +28,7 @@ const getAllTrans = () => {
 
 const getAllMessageCodes = () => {
 
-    return axios.get("http://localhost:8080/api/getAllMessageCodes", { headers: authHeader() })
+    return axios.get(APIURL + "/getAllMessageCodes", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -35,7 +38,7 @@ const getAllMessageCodes = () => {
 
 const getAllTransferCodes = () => {
 
-    return axios.get("http://localhost:8080/api/getAllTransferCodes", { headers: authHeader() })
+    return axios.get(APIURL + "/getAllTransferCodes", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -45,7 +48,7 @@ const getAllTransferCodes = () => {
 
 const getAllCurrencyCodes = () => {
 
-    return axios.get("http://localhost:8080/api/getAllCurrencyCodes", { headers: authHeader() })
+    return axios.get(APIURL + "/getAllCurrencyCodes", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -55,7 +58,7 @@ const getAllCurrencyCodes = () => {
 
 //GET CUSTOMER BY ID
 const getCustomerDetails = (id) => {
-    return axios.get(`http://localhost:8080/api/getCustomer/${id}`, { headers: authHeader()})
+    return axios.get(`${APIURL}/getCustomer/${id}`, { headers: authHeader()})
         .then((response) => {
             return response.data;
         });
@@ -66,7 +69,7 @@ const getCustomerDetails = (id) => {
 //SAVING A TRANSACTION
 const SaveTransaction = (data) => {
 
-    return axios.post("http://localhost:8080/api/transact", data, { headers: authHeader() }).then(
+    return axios.post(`${APIURL}/transact`, data, { headers: authHeader() }).then(
         (res) => {
             return res;
         }
@@ -75,7 +78,7 @@ const SaveTransaction = (data) => {
 
 //GET BANK BY BIC
 const getBankDetails = (bic) => {
-    return axios.get(`http://localhost:8080/api/getBank/${bic}`, { headers: authHeader() })
+    return axios.get(`${APIURL}/getBank/${bic}`, { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -84,7 +87,7 @@ const getBankDetails = (bic) => {
 //GET MESSAGE CODE COUNT
 
 const getMessageCount = () => {
-    return axios.get(`http://localhost:8080/api/getMessageCount`, { headers: authHeader() })
+    return axios.get(APIURL + "/getMessageCount", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -93,7 +96,7 @@ const getMessageCount = () => {
 //GET TRANSFER TYPE CODE COUNT
 
 const getTransferCount = () => {
-    return axios.get(`http://localhost:8080/api/getTransferCount`, { headers: authHeader() })
+    return axios.get(APIURL + "/getTransferCount", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -102,7 +105,7 @@ const getTransferCount = () => {
 //GET TOP CUSTOMERS
 
 const getTopCustomers = () => {
-    return axios.get(`http://localhost:8080/api/getTopCustomers`, { headers: authHeader() })
+    return axios.get(APIURL + "/getTopCustomers", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });
@@ -114,7 +117,7 @@ const getTopCustomers = () => {
 //GET TOP CUSTOMERS
 
 const getTopBanks = () => {
-    return axios.get(`http://localhost:8080/api/getTopBanks`, { headers: authHeader() })
+    return axios.get(APIURL + "/getTopBanks", { headers: authHeader() })
     .then((response) => {
         return response.data;
     });

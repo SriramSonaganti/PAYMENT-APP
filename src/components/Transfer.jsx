@@ -217,7 +217,7 @@ function Transfer() {
     }
 
   return (
-    <div className="py-30 bg-cover bg-no-repeat bg-fixed" style={{backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/books-68839.appspot.com/o/transfer.jpg?alt=media&token=a254c128-2de9-4f9a-8edf-e3156dc36158")'}}>
+    <div className="p-10 bg-cover bg-no-repeat bg-fixed" style={{backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/books-68839.appspot.com/o/transfer.jpg?alt=media&token=a254c128-2de9-4f9a-8edf-e3156dc36158")'}}>
    
       <div className='mx-auto p-4 w-1/2'>
           <h1 className="text-4xl font-extrabold text-center mb-12 text-indigo-600">  Money Transfer </h1>

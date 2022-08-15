@@ -19,7 +19,6 @@ function Response({ setOpenModal, resp }) {
                 
                    <div className="flex justify-between gap-4">
                           <button onClick={() => {
-                              
                               setOpenModal(false);
                               navigate("/");
                         }}

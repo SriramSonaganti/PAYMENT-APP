@@ -88,11 +88,11 @@ function Dashboard() {
 
       <div>
           <div className="container mx-auto p-6">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4  md:grid-cols-1 lg:grid-cols-2">
           
         <div className="flex justify-center p-2 rounded-xl">
             <div className='justify-center'>
-            <h1 className="text-2xl font-extrabold mb-12 text-center text-indigo-600"> Message Codes  </h1>
+            <h1 className="text-2xl font-extrabold text-center text-indigo-600"> Message Codes  </h1>
             </div>
     
                 
