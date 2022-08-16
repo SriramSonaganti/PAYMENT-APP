@@ -48,7 +48,7 @@ const getCurrentUser = () => {
 
 const getIp = () => {
 
-  return axios.get("http://geolocation-db.com/json/")
+  return axios.get("https://geolocation-db.com/json/")
     .then((response) => {
         return response.data;
      });
