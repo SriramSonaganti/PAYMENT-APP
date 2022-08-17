@@ -31,7 +31,7 @@ function App() {
 
             <Route path="/transfer" element={<Transfer />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/transaction" element={<Transaction />} />
+            <Route path="transaction" element={<Transaction />} />
           
            
 

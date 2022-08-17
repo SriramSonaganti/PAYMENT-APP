@@ -4,6 +4,8 @@ import rcb from '../assets/PAY.png'
 
 function Navbar() {
 
+    
+
     const [isEmp,SetEmp] = useState(false);
     const [isLoggedIn,SetLogin] = useState(false)
 
@@ -59,9 +61,14 @@ function Navbar() {
                                 :
                                 <div>
                                     <a href="/transfer" className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Transfer</a>
-                                    <a href="/dashboard" className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Dashboard</a>   
-                                    <a href="/transaction" className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Transactions</a>
-                                    <a href="/profile" className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Profile</a>
+
+                               
+                                    <a href='/dashboard' className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Dashboard</a>   
+                              
+                                 
+
+                                    <a  href="/transaction"  className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Transactions</a>
+                                     <a href="/profile" className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Profile</a>
                                     <a href="/signup" className="py-2 px-3 font-bold bg-sky-50  hover:text-green-600 text-indigo-600 rounded-lg">Signup</a>
                                 
                                 </div>

@@ -284,7 +284,7 @@ function Transfer() {
                   
                  {currencyList && currencyList.map((item, index) => (                
                         <>
-                            <option value={item.currencyCode}> {item.currencyCode} </option>
+                            <option key={index} value={item.currencyCode}> {item.currencyCode} </option>
                            
                         </> 
                       ))}
@@ -347,8 +347,8 @@ function Transfer() {
                           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                   <option value="" defaultValue="Select an Option" disabled hidden>Select an Option</option>
                   {transferList && transferList.map((item, index) => (                
-                        <>
-                            <option value={item.transferCode}> {item.transferCode} </option>
+                        < >
+                            <option key={index} value={item.transferCode}> {item.transferCode} </option>
                            
                         </> 
                       ))}
@@ -375,7 +375,7 @@ function Transfer() {
                   <option value="" defaultValue="Select an Option" disabled hidden>Select an Option</option>
                     {messageList && messageList.map((item, index) => (                
                         <>
-                            <option value={item.messagecode}> {item.messagecode} </option>
+                            <option key={index} value={item.messagecode}> {item.messagecode} </option>
                             {/* <option value="CORT">CORT</option>
                             <option value="HOLD">HOLD</option>
                             <option value="INTC">INTC</option>
