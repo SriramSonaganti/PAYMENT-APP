@@ -123,9 +123,14 @@ function Transfer() {
         setMessageCode(messageCode);
     }
 
-    const onCurrencyAmountChange = (e) => {
-        const currencyAmount = e.target.value;
-     
+  const onCurrencyAmountChange = (e) => {
+          if (e.target.value < 0) {
+            setCurrencyAmount("");
+          }
+        const currencyAmount =  Math.abs(e.target.value);
+
+      
+      
         if (inrAmount > clearbalance & !isOverdraft) {
             
             setCurrencyAmount("");
@@ -406,6 +411,7 @@ function Transfer() {
                         value={recAccountNumber}
                         onChange={onRecAccountNumberChange}
                         required
+                        maxlength="14"
                         className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       />
               </div>
@@ -434,6 +440,7 @@ function Transfer() {
                             type="number" name="currencyAmount"
                             required id="currencyAmount"
                             value={currencyAmount}
+                            min={0}
                             onChange={onCurrencyAmountChange}
                         />
                       {/* <p className="text-red-500 text-xs italic">Please fill out this field.</p> */}
