@@ -96,6 +96,11 @@ function Transfer() {
     const onCurrencyCodeChange= (e) => {
         const currencyCode = e.target.value;
         setCurrencyCode(currencyCode);
+        setCurrencyAmount("");
+        setTransferFee("");
+        setInrAmount("");
+        setAvailBalance(clearbalance);
+      
     }
 
     const onReceiverBICChange = (e) => {
@@ -141,27 +146,31 @@ function Transfer() {
         else {
             
             setCurrencyAmount(currencyAmount);
-            const transferFee = (currencyAmount / 100) * 0.25;
-            setTransferFee(transferFee);
+          
+            setTransferFee((currencyAmount / 100) * 0.25);
             
             if (currencyCode === "INR") {
-                const inrAmount = currencyAmount;
+              const inrAmount = currencyAmount;
               setInrAmount(inrAmount);
-              setAvailBalance( clearbalance - inrAmount);
+              setAvailBalance(clearbalance - inrAmount);
+              setTransferFee((inrAmount / 100) * 0.25);
             }
             else if (currencyCode === "USD") {
                 const inrAmount = currencyAmount * 74;
               setInrAmount(inrAmount);
+              setTransferFee((inrAmount / 100) * 0.25);
               setAvailBalance( clearbalance - inrAmount);
             }
             else if (currencyCode === "EUR") {
                 const inrAmount = currencyAmount * 90;
               setInrAmount(inrAmount);
+              setTransferFee((inrAmount / 100) * 0.25);
               setAvailBalance( clearbalance - inrAmount);
             }
             else if (currencyCode === "GBP") {
               const inrAmount = currencyAmount * 50;
               setInrAmount(inrAmount);
+              setTransferFee((inrAmount / 100) * 0.25);
               setAvailBalance( clearbalance - inrAmount);
             }
         }
@@ -411,7 +420,7 @@ function Transfer() {
                         value={recAccountNumber}
                         onChange={onRecAccountNumberChange}
                         required
-                        maxlength="14"
+                        maxLength={14}
                         className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       />
               </div>
